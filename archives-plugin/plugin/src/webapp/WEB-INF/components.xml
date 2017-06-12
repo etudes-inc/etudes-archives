@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!--
+/**********************************************************************************
+ * $URL: https://source.etudes.org/svn/apps/archives/trunk/archives-plugin/plugin/src/webapp/WEB-INF/components.xml $
+ * $Id: components.xml 11083 2015-06-09 18:38:30Z murthyt $
+ ***********************************************************************************
+ *
+ * Copyright (c) 2009, 2010, 2011, 2012, 2013, 2014 Etudes, Inc.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ **********************************************************************************/
+-->
+
+<beans>
+
+	<bean id="org.etudes.archives.plugin.PurgeAnnouncementsHandler"
+			class="org.etudes.archives.plugin.PurgeAnnouncementsHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeAuthzHandler"
+			class="org.etudes.archives.plugin.PurgeAuthzHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeBlogHandler"
+			class="org.etudes.archives.plugin.PurgeBlogHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeCalendarHandler"
+			class="org.etudes.archives.plugin.PurgeCalendarHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeChatHandler"
+			class="org.etudes.archives.plugin.PurgeChatHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeCourseMapHandler"
+			class="org.etudes.archives.plugin.PurgeCourseMapHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeChsHandler"
+			class="org.etudes.archives.plugin.PurgeChsHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+		<property name="serverConfigurationService"><ref bean="org.sakaiproject.component.api.ServerConfigurationService" /></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeGradebookHandler"
+			class="org.etudes.archives.plugin.PurgeGradebookHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeJforumHandler"
+			class="org.etudes.archives.plugin.PurgeJforumHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="serverConfigurationService"><ref bean="org.sakaiproject.component.api.ServerConfigurationService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeMeleteHandler"
+			class="org.etudes.archives.plugin.PurgeMeleteHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeMnemeHandler"
+			class="org.etudes.archives.plugin.PurgeMnemeHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeHomepageHandler"
+			class="org.etudes.archives.plugin.PurgeHomepageHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeRwikiHandler"
+			class="org.etudes.archives.plugin.PurgeRwikiHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeSiteHandler"
+			class="org.etudes.archives.plugin.PurgeSiteHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeSyllabusHandler"
+			class="org.etudes.archives.plugin.PurgeSyllabusHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.RecorderHandler"
+			class="org.etudes.archives.plugin.RecorderHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="serverConfigurationService"><ref bean="org.sakaiproject.component.api.ServerConfigurationService"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+		<property name="siteTermHandler"><ref bean="org.etudes.archives.plugin.SiteTermHandler"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+		<property name="autoDdl"><value>${auto.ddl}</value></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.XrefAnnouncementsHandler"
+			class="org.etudes.archives.plugin.XrefAnnouncementsHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="announcementService"><ref bean="org.sakaiproject.announcement.api.AnnouncementService"/></property>
+		<property name="contentHostingService"><ref bean="org.sakaiproject.content.api.ContentHostingService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.XrefCalendarHandler"
+			class="org.etudes.archives.plugin.XrefCalendarHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="calendarService"><ref bean="org.sakaiproject.calendar.api.CalendarService"/></property>
+		<property name="contentHostingService"><ref bean="org.sakaiproject.content.api.ContentHostingService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.XrefChsHandler"
+			class="org.etudes.archives.plugin.XrefChsHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="attachmentService"><ref bean="org.etudes.mneme.api.AttachmentService"/></property>
+		<property name="contentHostingService"><ref bean="org.sakaiproject.content.api.ContentHostingService"/></property>
+		<property name="entityManager"><ref bean="org.sakaiproject.entity.api.EntityManager"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.XrefJforumHandler"
+			class="org.etudes.archives.plugin.XrefJforumHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.XrefMnemeHandler"
+			class="org.etudes.archives.plugin.XrefMnemeHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="entityManager"><ref bean="org.sakaiproject.entity.api.EntityManager"/></property>
+		<property name="assessmentService"><ref bean="org.etudes.mneme.api.AssessmentService"/></property>
+		<property name="attachmentService"><ref bean="org.etudes.mneme.api.AttachmentService"/></property>
+		<property name="poolService"><ref bean="org.etudes.mneme.api.PoolService"/></property>
+		<property name="questionService"><ref bean="org.etudes.mneme.api.QuestionService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.XrefSyllabusHandler"
+			class="org.etudes.archives.plugin.XrefSyllabusHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="contentHostingService"><ref bean="org.sakaiproject.content.api.ContentHostingService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.SiteTermHandler"
+			class="org.etudes.archives.plugin.SiteTermHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="serverConfigurationService"><ref bean="org.sakaiproject.component.api.ServerConfigurationService"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+
+		<property name="autoDdl"><value>${auto.ddl}</value></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ArchiverHandler"
+			class="org.etudes.archives.plugin.ArchiverHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="serverConfigurationService"><ref bean="org.sakaiproject.component.api.ServerConfigurationService"/></property>
+		<property name="siteTermHandler"><ref bean="org.etudes.archives.plugin.SiteTermHandler"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ArchiveAnnouncementsHandler"
+			class="org.etudes.archives.plugin.ArchiveAnnouncementsHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="announcementService"><ref bean="org.sakaiproject.announcement.api.AnnouncementService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ArchiveArchiveHandler"
+			class="org.etudes.archives.plugin.ArchiveArchiveHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+	</bean>
+
+    <bean id="org.etudes.archives.plugin.ArchiveChatHandler"
+			class="org.etudes.archives.plugin.ArchiveChatHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+	</bean>	
+
+	<bean id="org.etudes.archives.plugin.ArchiveWebContentHandler"
+			class="org.etudes.archives.plugin.ArchiveWebContentHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ArchiveCalendarHandler"
+			class="org.etudes.archives.plugin.ArchiveCalendarHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="calendarService"><ref bean="org.sakaiproject.calendar.api.CalendarService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ArchiveChsHandler"
+			class="org.etudes.archives.plugin.ArchiveChsHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="contentHostingService"><ref bean="org.sakaiproject.content.api.ContentHostingService"/></property>
+		<property name="userDirectoryService"><ref bean="org.sakaiproject.user.api.UserDirectoryService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ArchiveCourseMapHandler"
+			class="org.etudes.archives.plugin.ArchiveCourseMapHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="courseMapService"><ref bean="org.etudes.coursemap.api.CourseMapService"/></property>
+	</bean>
+	
+	<bean id="org.etudes.archives.plugin.ArchiveE3GradebookHandler"
+			class="org.etudes.archives.plugin.ArchiveE3GradebookHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="gradebookService"><ref bean="org.etudes.gradebook.api.GradebookService"/></property>
+		<property name="gradebookImportService"><ref bean="org.etudes.gradebook.api.GradebookImportService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ArchiveGradebookHandler"
+			class="org.etudes.archives.plugin.ArchiveGradebookHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="gradebookService"><ref bean="org.sakaiproject.service.gradebook.GradebookService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ArchiveJforumHandler"
+			class="org.etudes.archives.plugin.ArchiveJforumHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="serverConfigurationService"><ref bean="org.sakaiproject.component.api.ServerConfigurationService"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+		<property name="userDirectoryService"><ref bean="org.sakaiproject.user.api.UserDirectoryService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ArchiveMeleteHandler"
+			class="org.etudes.archives.plugin.ArchiveMeleteHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="attachmentService"><ref bean="org.etudes.mneme.api.AttachmentService"/></property>
+		<property name="contentHostingService"><ref bean="org.sakaiproject.content.api.ContentHostingService"/></property>
+		<property name="entityManager"><ref bean="org.sakaiproject.entity.api.EntityManager"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+		<property name="userDirectoryService"><ref bean="org.sakaiproject.user.api.UserDirectoryService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ArchiveMnemeHandler"
+			class="org.etudes.archives.plugin.ArchiveMnemeHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="assessmentService"><ref bean="org.etudes.mneme.api.AssessmentService"/></property>
+		<property name="attachmentService"><ref bean="org.etudes.mneme.api.AttachmentService"/></property>
+		<property name="poolService"><ref bean="org.etudes.mneme.api.PoolService"/></property>
+		<property name="questionService"><ref bean="org.etudes.mneme.api.QuestionService"/></property>
+		<property name="userDirectoryService"><ref bean="org.sakaiproject.user.api.UserDirectoryService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ArchiveHomepageHandler"
+			class="org.etudes.archives.plugin.ArchiveHomepageHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="userDirectoryService"><ref bean="org.sakaiproject.user.api.UserDirectoryService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ArchiveSyllabusHandler"
+			class="org.etudes.archives.plugin.ArchiveSyllabusHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ImportArchiveHandler"
+			class="org.etudes.archives.plugin.ImportArchiveHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="pubDatesService"><ref bean="org.sakaiproject.site.api.PubDatesService"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+		<property name="timeService"><ref bean="org.sakaiproject.time.api.TimeService"/></property>
+		<property name="toolManager"><ref bean="org.sakaiproject.tool.api.ToolManager"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ImportWebContentHandler"
+			class="org.etudes.archives.plugin.ImportWebContentHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+		<property name="toolManager"><ref bean="org.sakaiproject.tool.api.ToolManager"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ImportAnnouncementsHandler"
+			class="org.etudes.archives.plugin.ImportAnnouncementsHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="announcementService"><ref bean="org.sakaiproject.announcement.api.AnnouncementService"/></property>
+		<property name="entityManager"><ref bean="org.sakaiproject.entity.api.EntityManager"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+		<property name="timeService"><ref bean="org.sakaiproject.time.api.TimeService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ImportCalendarHandler"
+			class="org.etudes.archives.plugin.ImportCalendarHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="calendarService"><ref bean="org.sakaiproject.calendar.api.CalendarService"/></property>
+		<property name="entityManager"><ref bean="org.sakaiproject.entity.api.EntityManager"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+		<property name="timeService"><ref bean="org.sakaiproject.time.api.TimeService"/></property>
+	</bean>
+
+    <bean id="org.etudes.archives.plugin.ImportChatHandler"
+			class="org.etudes.archives.plugin.ImportChatHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+	</bean>	
+
+	<bean id="org.etudes.archives.plugin.ImportChsHandler"
+			class="org.etudes.archives.plugin.ImportChsHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="contentHostingService"><ref bean="org.sakaiproject.content.api.ContentHostingService"/></property>
+		<property name="entityManager"><ref bean="org.sakaiproject.entity.api.EntityManager"/></property>
+		<property name="securityService"><ref bean="org.sakaiproject.authz.api.SecurityService"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+		<property name="timeService"><ref bean="org.sakaiproject.time.api.TimeService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ImportCourseMapHandler"
+			class="org.etudes.archives.plugin.ImportCourseMapHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="courseMapService"><ref bean="org.etudes.coursemap.api.CourseMapService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ImportE3GradebookHandler"
+			class="org.etudes.archives.plugin.ImportE3GradebookHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="gradebookService"><ref bean="org.etudes.gradebook.api.GradebookService"/></property>
+		<property name="gradebookImportService"><ref bean="org.etudes.gradebook.api.GradebookImportService"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+	
+	<bean id="org.etudes.archives.plugin.ImportGradebookHandler"
+			class="org.etudes.archives.plugin.ImportGradebookHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="assessmentService"><ref bean="org.etudes.mneme.api.AssessmentService"/></property>
+		<property name="etudesGradebookService"><ref bean="org.etudes.gradebook.api.GradebookService"/></property>
+		<property name="gradebookService"><ref bean="org.sakaiproject.service.gradebook.GradebookService"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>		
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ImportJforumHandler"
+			class="org.etudes.archives.plugin.ImportJforumHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<!-- for 2.4 only: <property name="gradebookService"><ref bean="org.sakaiproject.service.gradebook.GradebookExternalAssessmentService"/></property> -->
+		<property name="gradebookService"><ref bean="org.sakaiproject.service.gradebook.GradebookService"/></property>
+		<property name="sessionManager"><ref bean="org.sakaiproject.tool.api.SessionManager"/></property>
+		<property name="serverConfigurationService"><ref bean="org.sakaiproject.component.api.ServerConfigurationService"/></property>
+		<property name="siteService"><ref bean="org.sakaiproject.site.api.SiteService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+		<property name="timeService"><ref bean="org.sakaiproject.time.api.TimeService"/></property>
+		<property name="userDirectoryService"><ref bean="org.sakaiproject.user.api.UserDirectoryService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ImportMeleteHandler"
+			class="org.etudes.archives.plugin.ImportMeleteHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="contentHostingService"><ref bean="org.sakaiproject.content.api.ContentHostingService"/></property>
+		<property name="moduleService"><ref bean="org.etudes.api.app.melete.ModuleService"/></property>
+		<property name="sectionService"><ref bean="org.etudes.api.app.melete.SectionService"/></property>
+		<property name="securityService"><ref bean="org.sakaiproject.authz.api.SecurityService"/></property>
+		<property name="sessionManager"><ref bean="org.sakaiproject.tool.api.SessionManager"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+		<property name="timeService"><ref bean="org.sakaiproject.time.api.TimeService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ImportMnemeHandler"
+			class="org.etudes.archives.plugin.ImportMnemeHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="assessmentService"><ref bean="org.etudes.mneme.api.AssessmentService"/></property>
+		<property name="poolService"><ref bean="org.etudes.mneme.api.PoolService"/></property>
+		<property name="questionService"><ref bean="org.etudes.mneme.api.QuestionService"/></property>
+		<property name="entityManager"><ref bean="org.sakaiproject.entity.api.EntityManager"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ImportHomepageHandler"
+			class="org.etudes.archives.plugin.ImportHomepageHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.ImportSyllabusHandler"
+			class="org.etudes.archives.plugin.ImportSyllabusHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="entityManager"><ref bean="org.sakaiproject.entity.api.EntityManager"/></property>
+		<property name="syllabusManager"><ref bean="org.sakaiproject.api.app.syllabus.SyllabusManager"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeUserUserHandler"
+			class="org.etudes.archives.plugin.PurgeUserUserHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="userDirectoryService"><ref bean="org.sakaiproject.user.api.UserDirectoryService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeUserPreferencesHandler"
+			class="org.etudes.archives.plugin.PurgeUserPreferencesHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="preferencesService"><ref bean="org.sakaiproject.user.api.PreferencesService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeUserTrackingHandler"
+			class="org.etudes.archives.plugin.PurgeUserTrackingHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeUserArchivesHandler"
+			class="org.etudes.archives.plugin.PurgeUserArchivesHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeUserMeleteHandler"
+			class="org.etudes.archives.plugin.PurgeUserMeleteHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+	<bean id="org.etudes.archives.plugin.PurgeUserJforumHandler"
+			class="org.etudes.archives.plugin.PurgeUserJforumHandler"
+			init-method="init"
+			destroy-method="destroy"
+			singleton="true">
+
+		<property name="archivesService"><ref bean="org.etudes.archives.api.ArchivesService"/></property>
+		<property name="serverConfigurationService"><ref bean="org.sakaiproject.component.api.ServerConfigurationService" /></property>
+		<property name="sqlService"><ref bean="org.sakaiproject.db.api.SqlService"/></property>
+	</bean>
+
+</beans>

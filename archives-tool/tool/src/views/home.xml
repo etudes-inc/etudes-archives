@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+/**********************************************************************************
+ * $URL: https://source.etudes.org/svn/apps/archives/trunk/archives-tool/tool/src/views/home.xml $
+ * $Id: home.xml 3005 2012-06-19 04:03:21Z ggolden $
+ ***********************************************************************************
+ *
+ * Copyright (c) 2009, 2010, 2011, 2012 Etudes, Inc.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ **********************************************************************************/
+-->
+
+<interface title="home-title" header="home-header">
+	<container>
+
+		<navigationBar />
+
+		<section>
+			<container>
+
+				<countEdit title="page-size">
+					<model ref="subset.size" type="count" />
+				</countEdit>
+
+				<textEdit title="inst-code" rows="1" cols="40">
+					<model ref="institutionCodeValue.value" />
+				</textEdit>
+
+				<section>
+					<title highlighted="TRUE">
+						<message selector="archive-term" />
+					</title>
+					<container>
+						<instructions selector="archive-term-instructions" />
+						<textEdit title="archive-term-value" rows="1" cols="40">
+							<model ref="archiveTermValue.value" />
+						</textEdit>
+						<countEdit title="archive-term-page">
+							<model ref="archiveTermSubset.page" type="count" />
+						</countEdit>
+						<navigation title="archive-term" style="LINK" destination="ARCHIVE_TERM" submit="TRUE">
+							<confirm decision="TRUE" cancelSelector="cancel" selector="archive-term-confirm" />
+						</navigation>
+					</container>
+				</section>
+
+				<section>
+					<title highlighted="TRUE">
+						<message selector="archive-site" />
+					</title>
+					<container>
+						<instructions selector="archive-site-instructions" />
+						<textEdit title="archive-site-value" rows="1" cols="40">
+							<model ref="archiveSiteValue.value" />
+						</textEdit>
+						<navigation title="archive-site" style="LINK" destination="ARCHIVE_SITE" submit="TRUE">
+							<confirm decision="TRUE" cancelSelector="cancel" selector="archive-site-confirm" />
+						</navigation>
+					</container>
+				</section>
+
+				<section>
+					<title highlighted="TRUE">
+						<message selector="import-site" />
+					</title>
+					<container>
+						<instructions selector="import-site-instructions" />
+						<textEdit title="import-archive-value" rows="1" cols="40">
+							<model ref="importArchiveValue.value" />
+						</textEdit>
+						<textEdit title="import-site-value" rows="1" cols="40">
+							<model ref="importSiteValue.value" />
+						</textEdit>
+						<textEdit title="import-site-user" rows="1" cols="40">
+							<model ref="importSiteUserValue.value" />
+						</textEdit>
+						<navigation title="import-site" style="LINK" destination="IMPORT_SITE" submit="TRUE">
+							<confirm decision="TRUE" cancelSelector="cancel" selector="import-site-confirm" />
+						</navigation>
+					</container>
+				</section>
+
+				<section>
+					<title highlighted="TRUE">
+						<message selector="list" />
+					</title>
+					<container>
+						<instructions selector="list-instructions" />
+						<textEdit title="list-value" rows="1" cols="40">
+							<model ref="listValue.value" />
+						</textEdit>
+						<navigation title="list" style="LINK" destination="LIST" submit="TRUE">
+							<confirm decision="TRUE" cancelSelector="cancel" selector="list-confirm" />
+						</navigation>
+					</container>
+				</section>
+
+				<section>
+					<title highlighted="TRUE">
+						<message selector="purge-term" />
+					</title>
+					<container>
+						<instructions selector="purge-term-instructions" />
+						<textEdit title="purge-term-value" rows="1" cols="40">
+							<model ref="purgeTermValue.value" />
+						</textEdit>
+						<countEdit title="purge-term-page">
+							<model ref="purgeTermSubset.page" type="count" />
+						</countEdit>
+						<navigation title="purge-term" style="LINK" destination="PURGE_TERM" submit="TRUE">
+							<confirm decision="TRUE" cancelSelector="cancel" selector="purge-term-confirm" />
+						</navigation>
+					</container>
+				</section>
+
+				<section>
+					<title highlighted="TRUE">
+						<message selector="purge-site" />
+					</title>
+					<container>
+						<instructions selector="purge-site-instructions" />
+						<textEdit title="purge-site-value" rows="1" cols="40">
+							<model ref="purgeSiteValue.value" />
+						</textEdit>
+						<navigation title="purge-site" style="LINK" destination="PURGE_SITE" submit="TRUE">
+							<confirm decision="TRUE" cancelSelector="cancel" selector="purge-site-confirm" />
+						</navigation>
+					</container>
+				</section>
+
+				<section>
+					<title highlighted="TRUE">
+						<message selector="delete-term" />
+					</title>
+					<container>
+						<instructions selector="delete-term-instructions" />
+						<textEdit title="delete-term-value" rows="1" cols="40">
+							<model ref="deleteTermValue.value" />
+						</textEdit>
+						<countEdit title="delete-term-page">
+							<model ref="deleteTermSubset.page" type="count" />
+						</countEdit>
+						<navigation title="delete-term" style="LINK" destination="DELETE_TERM" submit="TRUE">
+							<confirm decision="TRUE" cancelSelector="cancel" selector="delete-term-confirm" />
+						</navigation>
+					</container>
+				</section>
+
+				<section>
+					<title highlighted="TRUE">
+						<message selector="delete-site" />
+					</title>
+					<container>
+						<instructions selector="delete-site-instructions" />
+						<textEdit title="delete-site-value" rows="1" cols="40">
+							<model ref="deleteSiteValue.value" />
+						</textEdit>
+						<navigation title="delete-site" style="LINK" destination="DELETE_SITE" submit="TRUE">
+							<confirm decision="TRUE" cancelSelector="cancel" selector="delete-site-confirm" />
+						</navigation>
+					</container>
+				</section>
+
+				<section>
+					<title highlighted="TRUE">
+						<message selector="xref-term" />
+					</title>
+					<container>
+						<instructions selector="xref-term-instructions" />
+						<textEdit title="xref-term-value" rows="1" cols="40">
+							<model ref="xrefTermValue.value" />
+						</textEdit>
+						<countEdit title="xref-term-page">
+							<model ref="xrefTermSubset.page" type="count" />
+						</countEdit>
+						<navigation title="xref-term" style="LINK" destination="XREF_TERM" submit="TRUE">
+							<confirm decision="TRUE" cancelSelector="cancel" selector="xref-term-confirm" />
+						</navigation>
+					</container>
+				</section>
+
+				<section>
+					<title highlighted="TRUE">
+						<message selector="xref-site" />
+					</title>
+					<container>
+						<instructions selector="xref-site-instructions" />
+						<textEdit title="xref-site-value" rows="1" cols="40">
+							<model ref="xrefSiteValue.value" />
+						</textEdit>
+						<navigation title="xref-site" style="LINK" destination="XREF_SITE" submit="TRUE">
+							<confirm decision="TRUE" cancelSelector="cancel" selector="xref-site-confirm" />
+						</navigation>
+					</container>
+				</section>
+
+				<section>
+					<title highlighted="TRUE">
+						<message selector="purge-user" />
+					</title>
+					<container>
+						<instructions selector="purge-user-instructions" />
+						<textEdit title="purge-user-value" rows="1" cols="40">
+							<model ref="purgeUserValue.value" />
+						</textEdit>
+						<navigation title="purge-user" style="LINK" destination="PURGE_USER" submit="TRUE">
+							<confirm decision="TRUE" cancelSelector="cancel" selector="purge-user-confirm" />
+						</navigation>
+					</container>
+				</section>
+
+				<section>
+					<title highlighted="TRUE">
+						<message selector="list-inactive-users" />
+					</title>
+					<container>
+						<instructions selector="list-inactive-users-instructions" />
+						<countEdit title="list-inactive-users-limit">
+							<model ref="listInactiveUsersSubset.size" type="count" />
+						</countEdit>
+						<navigation title="list-inactive-users" style="LINK" destination="LIST_INACTIVE_USERS" submit="TRUE">
+							<confirm decision="TRUE" cancelSelector="cancel" selector="list-inactive-users-confirm" />
+						</navigation>
+					</container>
+				</section>
+
+				<section>
+					<title highlighted="TRUE">
+						<message selector="purge-inactive-users" />
+					</title>
+					<container>
+						<instructions selector="purge-inactive-users-instructions" />
+						<countEdit title="purge-inactive-users-limit">
+							<model ref="purgeInactiveUsersSubset.size" type="count" />
+						</countEdit>
+						<navigation title="purge-inactive-users" style="LINK" destination="PURGE_INACTIVE_USERS" submit="TRUE">
+							<confirm decision="TRUE" cancelSelector="cancel" selector="purge-inactive-users-confirm" />
+						</navigation>
+					</container>
+				</section>
+
+			</container>
+		</section>
+
+		<navigationBar />
+
+	</container>
+</interface>
